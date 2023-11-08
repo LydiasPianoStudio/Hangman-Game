@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hangman Game</h1>
+    <div class="HangmanGame">
+      <!-- The Hangman graphics will be dynamically generated using JavaScript -->
+      <!-- For example, you can display the Hangman image based on the game's progress -->
+
+        <!-- The Hangman graphics will be dynamically generated using JavaScript -->
+        <img id="hangmanImage" src="./pictures/hangmanGame1.jpg" alt="Hangman Image" style="max-width: 100%; max-height: 100%;">
+      </div>
+
+    </div>
+    <div class="word">
+      <!-- The current word to guess will be dynamically generated using JavaScript -->
+      <p id="wordToGuess">Word to Guess: _ _ _ _ _ _</p>
+    </div>
+    <div class="letters">
+      <!-- The alphabet buttons for guessing letters will be dynamically generated using JavaScript -->
+      <!-- For example, you can create buttons for each letter in the alphabet -->
+      <div id="alphabetButtons">
+        <button class="letter-button" value="A">A</button>
+        <button class="letter-button" value="B">B</button>
+        <!-- Add buttons for all letters... -->
+        <button class="letter-button" value="Z">Z</button>
+      </div>
+    </div>
+    <div class="message">
+      <!-- The win/lose message will be dynamically generated using JavaScript -->
+      <p id="gameMessage">Guess the word to save the Hangman!</p>
+    </div>
+    <div class="rules">
+      <h2>Rules:</h2>
+      <ul>
+        <li>Try to guess the word by selecting letters.</li>
+        <li>You have a limited number of incorrect guesses (6) before the Hangman is completed.</li>
+        <li>If you guess the word correctly, you win. If the Hangman is completed, you lose.</li>
+      </ul>
+    </div>
+  </div>
+  <script src="HangmanGame.js"></script>  
+</body>
+</html>
+
