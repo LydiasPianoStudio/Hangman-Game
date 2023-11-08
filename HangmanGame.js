@@ -71,6 +71,7 @@ function handleGuess(letter) {
   checkWinOrLose();
 }
 
+
 // Update the Hangman graphic
 function updateHangmanGameGraphic() {
   if (imageCount <= maxWrongGuesses) {
@@ -83,6 +84,15 @@ function updateHangmanGameGraphic() {
     hangmanGameContainer.innerHTML = ''; // Clear the container
     hangmanGameContainer.appendChild(hangmanImage); // Append the new image
     imageCount++;
+  } else if (imageCount === maxWrongGuesses + 1) {
+    const hangmanGameContainer = document.querySelector('.HangmanGame');
+    const hangmanImage = document.createElement('img');
+    hangmanImage.src = './pictures/gameOver.png'; // Display "gameOver.png" for the 7th guess
+    hangmanImage.alt = 'Game Over';
+    hangmanImage.style.maxWidth = '100%';
+    hangmanImage.style.maxHeight = '100%';
+    hangmanGameContainer.innerHTML = '';
+    hangmanGameContainer.appendChild(hangmanImage);
   }
 }
 
