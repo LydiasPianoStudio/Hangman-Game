@@ -19,24 +19,32 @@ body {
 .office-image-container {
   max-width: 100%;
   max-height: 100%;
-  margin: 20px; /* Adjust margin as needed */
+  margin: 20px;
+  /* Adjust margin as needed */
 }
 
 .office-image-container img {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+  border-radius: 10px;
+  /* Optional: Add border-radius for rounded corners */
 }
 
 .HangmanGame {
   width: 400px;
   height: 400px;
-  border: 2px solid blue;
   margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  /* Ensure that content does not overflow */
+}
+
+.win-gif-container {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .word {
@@ -83,6 +91,7 @@ body {
 /* Add a media query for smaller screens */
 @media only screen and (max-width: 768px) {
   .HangmanGame {
-    max-width: 100%; /* Adjust for smaller screens */
+    max-width: 100%;
+    /* Adjust for smaller screens */
   }
 }

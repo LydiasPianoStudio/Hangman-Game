@@ -1,23 +1,23 @@
 // Define the list of words to choose from
 const words = [
-    'DWIGHT',
-    'MICHAEL',
-    'JIM',
-    'PAM',
-    'ANGELA',
-    'STANLEY',
-    'DUNDERMIFFLIN',
-    'SCRANTON',
-    'PRANK',
-    'PAPER',
-    'BEARS',
-    'SALES',
-    'THATSWHATSHESAID',
-    'SCHRUTE',
-    'HALPERT',
-    'SCRANTONSTRANGLER'
-  ];
-  
+  'DWIGHT',
+  'MICHAEL',
+  'JIM',
+  'PAM',
+  'ANGELA',
+  'STANLEY',
+  'DUNDERMIFFLIN',
+  'SCRANTON',
+  'PRANK',
+  'PAPER',
+  'BEARS',
+  'SALES',
+  'THATSWHATSHESAID',
+  'SCHRUTE',
+  'HALPERT',
+  'SCRANTONSTRANGLER'
+];
+
 
 
 // Define the maximum number of incorrect guesses allowed
@@ -109,14 +109,15 @@ function updateHangmanGameGraphic() {
 function displayWinGif() {
   const hangmanGameContainer = document.querySelector('.HangmanGame');
   hangmanGameContainer.innerHTML = `
-    <div style="max-width: 100%; margin: 0 auto; padding: 20px; background-color: #ffffff;">
+    <div class="win-gif-container" style="max-width: 100%; max-height: 100%; margin: 0 auto; padding: 20px; background: rgba(0, 0, 0, 0.5); border-radius: 10px; overflow: hidden;">
       <img src="https://media.giphy.com/media/tlGD7PDy1w8fK/giphy.gif" 
            alt="Winning GIF" 
-           style="width: 100%; height: auto; border-radius: 10px;">
+           style="width: 100%; height: auto;">
     </div>
     <p><a href="https://giphy.com/gifs/happy-the-office-surprised-tlGD7PDy1w8fK" target="_blank">via GIPHY</a></p>
   `;
 }
+
 
 
 
@@ -165,7 +166,7 @@ function displayWinMessage() {
 function displayLoseMessage() {
   const messageContainer = document.querySelector('.message');
   messageContainer.innerText = `You lose! The word was "${wordToGuess}".`;
-  
+
   // Change the image source to "gameOver.png"
   const hangmanImage = document.getElementById('hangmanImage');
   hangmanImage.src = 'pictures/gameOver.png';
