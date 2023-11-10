@@ -12,8 +12,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   text-align: center;
+}
+
+/* Add this style to your existing CSS or adjust as needed */
+.office-image-container {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 20px; /* Adjust margin as needed */
+}
+
+.office-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
 }
 
 .HangmanGame {
@@ -68,5 +80,9 @@ body {
   text-align: left;
 }
 
-
-  
+/* Add a media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .HangmanGame {
+    max-width: 100%; /* Adjust for smaller screens */
+  }
+}

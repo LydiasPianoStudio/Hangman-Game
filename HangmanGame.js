@@ -1,14 +1,24 @@
 // Define the list of words to choose from
 const words = [
-  'JAVASCRIPT',
-  'HTML',
-  'CSS',
-  'NODE',
-  'REACT',
-  'ANGULAR',
-  'JQUERY',
-  'VUE'
-];
+    'DWIGHT',
+    'MICHAEL',
+    'JIM',
+    'PAM',
+    'ANGELA',
+    'STANLEY',
+    'DUNDERMIFFLIN',
+    'SCRANTON',
+    'PRANK',
+    'PAPER',
+    'BEARS',
+    'SALES',
+    'THATSWHATSHESAID',
+    'SCHRUTE',
+    'HALPERT',
+    'SCRANTONSTRANGLER'
+  ];
+  
+
 
 // Define the maximum number of incorrect guesses allowed
 const maxWrongGuesses = 6;
@@ -96,6 +106,19 @@ function updateHangmanGameGraphic() {
   }
 }
 
+function displayWinGif() {
+  const hangmanGameContainer = document.querySelector('.HangmanGame');
+  hangmanGameContainer.innerHTML = `
+    <div style="max-width: 100%; margin: 0 auto; padding: 20px; background-color: #ffffff;">
+      <img src="https://media.giphy.com/media/tlGD7PDy1w8fK/giphy.gif" 
+           alt="Winning GIF" 
+           style="width: 100%; height: auto; border-radius: 10px;">
+    </div>
+    <p><a href="https://giphy.com/gifs/happy-the-office-surprised-tlGD7PDy1w8fK" target="_blank">via GIPHY</a></p>
+  `;
+}
+
+
 
 // Generate letter buttons
 function generateLetterButtons() {
@@ -130,11 +153,13 @@ function checkWinOrLose() {
   }
 }
 
-// Display a win message
+// Display a win message and the GIF
 function displayWinMessage() {
   const messageContainer = document.querySelector('.message');
   messageContainer.innerText = 'You win!';
+  displayWinGif();
 }
+
 
 // Display a lose message and "gameOver.png" image
 function displayLoseMessage() {
