@@ -15,7 +15,9 @@ const words = [
   'THATSWHATSHESAID',
   'SCHRUTE',
   'HALPERT',
-  'SCRANTONSTRANGLER'
+  'BEETS',
+  'CREED',
+  'TOBY'
 ];
 
 
