@@ -50,6 +50,24 @@ function initializeGame() {
   clearMessage();
 }
 
+// Add this function to your HangmanGame.js file
+function resetGame() {
+  // Reset variables and game state
+  wordToGuess = '';
+  guessedLetters = [];
+  wrongGuesses = 0;
+  imageCount = 1;
+
+  // Call the function to initialize the game (you may need to adjust this function name)
+  initializeGame();
+}
+
+
+
+// You can call this function when the page loads to initialize the game
+window.addEventListener('load', initializeGame);
+
+
 // Update the word display
 function updateWordDisplay() {
   const wordContainer = document.querySelector('.word');
@@ -159,20 +177,35 @@ function checkWinOrLose() {
 // Display a win message and the GIF
 function displayWinMessage() {
   const messageContainer = document.querySelector('.message');
-  messageContainer.innerText = 'You win!';
+  messageContainer.innerHTML = `
+    <p>You win!</p>
+    <button id="replayButton" class="replay-button">Replay</button>
+  `;
+  document.getElementById('replayButton').addEventListener('click', resetGame);
   displayWinGif();
 }
-
 
 // Display a lose message and "gameOver.png" image
 function displayLoseMessage() {
   const messageContainer = document.querySelector('.message');
-  messageContainer.innerText = `You lose! The word was "${wordToGuess}".`;
+  messageContainer.innerHTML = `
+    <p>You lose! The word was "${wordToGuess}".</p>
+    <button id="replayButton" class="replay-button">Replay</button>
+  `;
+  document.getElementById('replayButton').addEventListener('click', resetGame);
 
   // Change the image source to "gameOver.png"
   const hangmanImage = document.getElementById('hangmanImage');
   hangmanImage.src = 'pictures/gameOver.png';
 }
+
+
+
+
+
+
+
+
 
 // Disable letter buttons after the game ends
 function disableLetterButtons() {
