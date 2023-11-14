@@ -51,14 +51,7 @@ body {
   justify-content: center;
 }
 
-.letters {
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.letters button {
+ button{
   margin: 5px;
   padding: 10px;
   font-size: 1.2rem;
@@ -66,7 +59,15 @@ body {
   background-color: blue;
   color: #fff;
   cursor: pointer;
+
 }
+
+button:active {
+  background-color: #ff0000; /* Change this to the desired color */
+  color: #ffffff; /* Change this to the desired text color */
+}
+
+
 
 .message, #gameMessage, #Edition {
   font-size: 1.5rem;
@@ -96,11 +97,6 @@ body {
   transition: background-color 0.3s ease;
   margin-top: 10px; /* Adjust margin as needed */
 }
-
-.replay-button:hover {
-  background-color: #45a049;
-}
-
 
 .rules {
   font-size: 1.2rem;

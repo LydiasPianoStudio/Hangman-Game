@@ -74,6 +74,7 @@ function updateWordDisplay() {
   wordContainer.innerText = guessedLetters.join(' ');
 }
 
+
 // Handle a letter guess
 function handleGuess(letter) {
   // If the letter has already been guessed, do nothing
@@ -97,9 +98,24 @@ function handleGuess(letter) {
   // Update the word display
   updateWordDisplay();
 
+  // Disable the clicked button and add CSS for styling
+  disableAndStyleLetterButton(letter);
+
   // Check if the game has been won or lost
   checkWinOrLose();
 }
+
+// Function to disable the letter button and add styling
+function disableAndStyleLetterButton(letter) {
+  const button = document.querySelector(`.letterButton[value=${letter}]`);
+  if (button && !button.disabled) {
+    button.disabled = true;
+    button.classList.add('disabled', 'active');
+  }
+}
+
+
+
 
 
 // Update the Hangman graphic
@@ -171,6 +187,15 @@ function checkWinOrLose() {
   }
 }
 
+// Disable letter buttons after the game ends
+function disableLetterButtons() {
+  const letterButtons = document.querySelectorAll('.letterButton');
+  letterButtons.forEach(button => {
+    button.disabled = true;
+  });
+}
+
+
 // Display a win message and the GIF
 function displayWinMessage() {
   const messageContainer = document.querySelector('.message');
@@ -196,13 +221,7 @@ function displayLoseMessage() {
   hangmanImage.src = 'pictures/gameOver.png';
 }
 
-// Disable letter buttons after the game ends
-function disableLetterButtons() {
-  const letterButtons = document.querySelectorAll('.letters button');
-  letterButtons.forEach(button => {
-    button.disabled = true;
-  });
-}
+
 
 // Initialize the game when the page loads
 window.addEventListener('load', initializeGame);

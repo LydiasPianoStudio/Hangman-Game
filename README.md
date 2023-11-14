@@ -6,3 +6,4 @@ hangman jpeg created using Adobe Stock and Paint
 ## THANK YOU
 resource: https://www.freecodecamp.org/news/how-to-code-a-simple-game/
 Thanks to Free Code Camp and Shane Duggan for this tutorial
+
