@@ -138,9 +138,6 @@ function displayWinGif() {
   `;
 }
 
-
-
-
 // Generate letter buttons
 function generateLetterButtons() {
   const lettersContainer = document.querySelector('.letters');
@@ -199,14 +196,6 @@ function displayLoseMessage() {
   hangmanImage.src = 'pictures/gameOver.png';
 }
 
-
-
-
-
-
-
-
-
 // Disable letter buttons after the game ends
 function disableLetterButtons() {
   const letterButtons = document.querySelectorAll('.letters button');
@@ -217,4 +206,3 @@ function disableLetterButtons() {
 
 // Initialize the game when the page loads
 window.addEventListener('load', initializeGame);
-
