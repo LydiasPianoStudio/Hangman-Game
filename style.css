@@ -67,6 +67,10 @@ button:active {
   color: #ffffff; /* Change this to the desired text color */
 }
 
+button:disabled {
+  background-color: #ff0000; /* Change this to the desired color */
+  color: #ffffff; /* Change this to the desired text color */
+}
 
 
 .message, #gameMessage, #Edition {

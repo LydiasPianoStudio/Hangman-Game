@@ -62,8 +62,6 @@ function resetGame() {
   initializeGame();
 }
 
-
-
 // You can call this function when the page loads to initialize the game
 window.addEventListener('load', initializeGame);
 
@@ -83,7 +81,7 @@ function handleGuess(letter) {
   }
 
   // Add the letter to the list of guessed letters
-  guessedLetters.forEach((guessedLetter, index) => {
+  guessedLetters.forEach((guessedLetters, index) => {
     if (wordToGuess[index] === letter) {
       guessedLetters[index] = letter;
     }
@@ -113,10 +111,6 @@ function disableAndStyleLetterButton(letter) {
     button.classList.add('disabled', 'active');
   }
 }
-
-
-
-
 
 // Update the Hangman graphic
 function updateHangmanGameGraphic() {
@@ -187,15 +181,6 @@ function checkWinOrLose() {
   }
 }
 
-// Disable letter buttons after the game ends
-function disableLetterButtons() {
-  const letterButtons = document.querySelectorAll('.letterButton');
-  letterButtons.forEach(button => {
-    button.disabled = true;
-  });
-}
-
-
 // Display a win message and the GIF
 function displayWinMessage() {
   const messageContainer = document.querySelector('.message');
@@ -220,8 +205,6 @@ function displayLoseMessage() {
   const hangmanImage = document.getElementById('hangmanImage');
   hangmanImage.src = 'pictures/gameOver.png';
 }
-
-
 
 // Initialize the game when the page loads
 window.addEventListener('load', initializeGame);
