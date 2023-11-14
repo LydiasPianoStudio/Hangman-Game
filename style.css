@@ -51,7 +51,7 @@ body {
   justify-content: center;
 }
 
- button{
+button {
   margin: 5px;
   padding: 10px;
   font-size: 1.2rem;
@@ -63,17 +63,15 @@ body {
 }
 
 button:active {
-  background-color: #ff0000; /* Change this to the desired color */
-  color: #ffffff; /* Change this to the desired text color */
+  background-color: #ff0000;
+  /* Change this to the desired color */
+  color: #100f0f;
+  
 }
 
-button:disabled {
-  background-color: #ff0000; /* Change this to the desired color */
-  color: #ffffff; /* Change this to the desired text color */
-}
-
-
-.message, #gameMessage, #Edition {
+.message,
+#gameMessage,
+#Edition {
   font-size: 1.5rem;
   margin: 20px;
   display: flex;
@@ -87,7 +85,8 @@ button:disabled {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px; /* Adjust margin as needed */
+  margin-top: 20px;
+  
 }
 
 .replay-button {
@@ -99,7 +98,8 @@ button:disabled {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 10px; /* Adjust margin as needed */
+  margin-top: 10px;
+  
 }
 
 .rules {

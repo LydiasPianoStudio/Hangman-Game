@@ -81,7 +81,7 @@ function handleGuess(letter) {
   }
 
   // Add the letter to the list of guessed letters
-  guessedLetters.forEach((guessedLetters, index) => {
+  guessedLetters.forEach((guessedLetter, index) => {
     if (wordToGuess[index] === letter) {
       guessedLetters[index] = letter;
     }
